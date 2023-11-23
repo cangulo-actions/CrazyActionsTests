@@ -11,3 +11,10 @@ jobs:
     steps:
       - name: semver
         uses: cangulo-actions/semver@main
+        id: semver
+      - name: print semver output
+        run: |
+          echo "version: ${{ steps.semver.outputs.version }}"
+          echo "release-title: ${{ steps.semver.outputs.release-title }}"
+          echo "release-type: ${{ steps.semver.outputs.release-type }}"
+          echo "changes: ${{ steps.semver.outputs.changes }}"
