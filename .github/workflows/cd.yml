@@ -25,3 +25,4 @@ jobs:
           echo "changes: ${{ steps.semver.outputs.changes }}"
           echo "changelog-record: ${{ steps.semver.outputs.changelog-record }}"
           echo "scopes: ${{ steps.semver.outputs.scopes }}"
+# refresh 2023-11-24
