@@ -9,6 +9,11 @@ jobs:
     name: release new version
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: semver
         uses: cangulo-actions/semver@main
         id: semver
