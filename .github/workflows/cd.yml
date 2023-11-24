@@ -23,3 +23,5 @@ jobs:
           echo "release-title: ${{ steps.semver.outputs.release-title }}"
           echo "release-type: ${{ steps.semver.outputs.release-type }}"
           echo "changes: ${{ steps.semver.outputs.changes }}"
+          echo "changes: ${{ steps.semver.outputs.changelog-record }}"
+          echo "changes: ${{ steps.semver.outputs.scopes }}"
