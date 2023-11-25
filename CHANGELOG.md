@@ -1,3 +1,8 @@
+# 7.0.2 fix: updated cd workflow 5
+
+## patches:
+* fix: updated cd workflow 5
+
 # 7.0.1 fix: updated cd workflow 4
 
 ## patches:
