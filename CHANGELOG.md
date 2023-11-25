@@ -1,3 +1,8 @@
+# 7.0.4 fix: #123 random commit that fixes something
+
+## patches:
+* fix: #123 random commit that fixes something
+
 # 7.0.3 fix: updated cd workflow 8
 
 ## patches:
