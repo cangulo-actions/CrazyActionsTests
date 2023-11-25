@@ -1,3 +1,8 @@
+# 1.0.15 test (#27)
+
+## patches:
+* fix: #123 random commit that fixes something
+
 # 1.0.14 fix: #123 random commit that fixes something (#26)
 
 ## patches:
