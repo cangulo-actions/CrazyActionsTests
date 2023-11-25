@@ -17,11 +17,11 @@ jobs:
         with:
           create-gh-release: true
           print-summary: true
-      # - name: print semver output
-      #   run: |
-      #     echo "version: ${{ steps.semver.outputs.version }}"
-      #     echo "release-title: ${{ steps.semver.outputs.release-title }}"
-      #     echo "release-type: ${{ steps.semver.outputs.release-type }}"
+      - name: print semver output
+        run: |
+          echo "version: ${{ steps.semver.outputs.version }}"
+          echo "release-title: ${{ steps.semver.outputs.release-title }}"
+          echo "release-type: ${{ steps.semver.outputs.release-type }}"
       #     # echo "changes: \"${{ steps.semver.outputs.changes }}\""
       #     # echo "changelog-record: \"${{ steps.semver.outputs.changelog-record }}\""
       #     # echo "scopes: \"${{ steps.semver.outputs.scopes }}\""
