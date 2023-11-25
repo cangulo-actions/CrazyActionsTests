@@ -1,3 +1,15 @@
+# 1.0.0 test (#14)
+
+## breaking changes:
+* break: #123 random commit that introduces a breaking change
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: #123 random commit that fixes a bug
+## others
+* improved script push commit
+* moved script to .vscode
+
 # 0.0.5 test (#13)
 
 ## patches:
