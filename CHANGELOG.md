@@ -1,3 +1,8 @@
+# 1.0.6 fix: updated cd workflow
+
+## patches:
+* fix: updated cd workflow
+
 # 1.0.5 fix: #123 random commit that fixes a bug (#20)
 
 ## patches:
