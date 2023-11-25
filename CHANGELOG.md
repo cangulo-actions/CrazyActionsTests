@@ -1,3 +1,8 @@
+# 7.0.7 fix: #123 random commit that fixes something (#51)
+
+## patches:
+* fix: #123 random commit that fixes something (#51)
+
 # 7.0.6 fix: #123 random commit that fixes something
 
 ## patches:
