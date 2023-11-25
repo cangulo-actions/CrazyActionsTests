@@ -1,3 +1,8 @@
+# 1.0.12 fix: #123 random commit that fixes something (#24)
+
+## patches:
+* fix: #123 random commit that fixes something (#24)
+
 # 1.0.11 fix: #123 random commit (#23)
 
 ## patches:
