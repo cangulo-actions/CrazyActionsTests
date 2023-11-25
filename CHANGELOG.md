@@ -1,3 +1,8 @@
+# 1.0.3 test (#17)
+
+## patches:
+* fix: #123 random commit that fixes a bug
+
 # 1.0.2 fix: #123 random commit that fixes a bug (#16)
 
 ## patches:
