@@ -1,3 +1,8 @@
+# 1.0.9 fix: #123 random commit that fixes a bug (#21)
+
+## patches:
+* fix: #123 random commit that fixes a bug (#21)
+
 # 1.0.8 fix: updated cd workflow2
 
 ## patches:
