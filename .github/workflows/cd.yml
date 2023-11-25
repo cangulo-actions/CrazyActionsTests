@@ -14,6 +14,9 @@ jobs:
       - name: semver
         uses: cangulo-actions/semver@init
         id: semver
+        with:
+          create-gh-release: false
+          print-summary: true
       # - name: print semver output
       #   run: |
       #     echo "version: ${{ steps.semver.outputs.version }}"
