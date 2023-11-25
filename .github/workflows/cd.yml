@@ -26,8 +26,14 @@ jobs:
           echo "version: ${{ steps.semver.outputs.version }}"
           echo "release-title: ${{ steps.semver.outputs.release-title }}"
           echo "release-type: ${{ steps.semver.outputs.release-type }}"
+
+          echo "changes:"
           echo "$CHANGES" | jq .
+
+          echo "changes-log:"
           echo "$CHANGELOG_RECORD"
+
+          echo "scopes:"
           echo "$SCOPES" | jq .
 
 # refresh 2023-11-25
