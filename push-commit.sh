@@ -14,8 +14,8 @@ git commit --allow-empty -am "break: #123 random commit that introduces a breaki
 git pushrf
 
 # GH CLI create PR
-gh pr create --fill
-pr_number=$(gh pr list -B main -H test --state open --json number | jq -r '.[0].number')
-echo "PR number: $pr_number"
+# gh pr create --fill
+# pr_number=$(gh pr list -B main -H test --state open --json number | jq -r '.[0].number')
+# echo "PR number: $pr_number"
 # gh pr merge $pr_number --squash --delete-branch
-q
+
