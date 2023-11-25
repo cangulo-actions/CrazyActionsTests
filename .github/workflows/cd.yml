@@ -18,12 +18,16 @@ jobs:
           create-gh-release: true
           print-summary: true
       - name: print semver output
+        env:
+          CHANGES: ${{ steps.semver.outputs.changes }}
+          CHANGELOG_RECORD: ${{ steps.semver.outputs.changelog-record }}
+          SCOPES: ${{ steps.semver.outputs.scopes }}
         run: |
           echo "version: ${{ steps.semver.outputs.version }}"
           echo "release-title: ${{ steps.semver.outputs.release-title }}"
           echo "release-type: ${{ steps.semver.outputs.release-type }}"
-      #     # echo "changes: \"${{ steps.semver.outputs.changes }}\""
-      #     # echo "changelog-record: \"${{ steps.semver.outputs.changelog-record }}\""
-      #     # echo "scopes: \"${{ steps.semver.outputs.scopes }}\""
+          echo "$CHANGES" | jq .
+          echo "$CHANGELOG_RECORD"
+          echo "$SCOPES" | jq .
 
 # refresh 2023-11-25
