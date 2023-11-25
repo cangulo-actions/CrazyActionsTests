@@ -1,3 +1,8 @@
+# 2.0.1 test (#29)
+
+## patches:
+* fix: #123 random commit that fixes something
+
 # 2.0.0 test (#28)
 
 ## breaking changes:
