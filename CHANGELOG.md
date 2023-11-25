@@ -1,3 +1,12 @@
+# 5.0.0 test (#48)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: #123 random commit that fixes something
+
 # 4.0.3 test (#47)
 
 ## patches:
