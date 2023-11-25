@@ -1,3 +1,8 @@
+# 2.0.2 fix: updated cd workflow2
+
+## patches:
+* fix: updated cd workflow2
+
 # 2.0.1 test (#29)
 
 ## patches:
