@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
       - name: semver
         uses: cangulo-actions/semver@init
         id: semver
@@ -25,4 +22,5 @@ jobs:
           # echo "changes: \"${{ steps.semver.outputs.changes }}\""
           # echo "changelog-record: \"${{ steps.semver.outputs.changelog-record }}\""
           # echo "scopes: \"${{ steps.semver.outputs.scopes }}\""
+
 # refresh 2023-11-25
