@@ -1,3 +1,12 @@
+# 2.0.0 test (#28)
+
+## breaking changes:
+* break: #123 random commit that fixes something
+## new features:
+* feat: #123 random commit that fixes something
+## patches:
+* fix: #123 random commit that fixes something
+
 # 1.0.15 test (#27)
 
 ## patches:
