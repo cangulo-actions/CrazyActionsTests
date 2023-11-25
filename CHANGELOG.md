@@ -1,3 +1,8 @@
+# 1.0.8 fix: updated cd workflow2
+
+## patches:
+* fix: updated cd workflow2
+
 # 1.0.7 fix: updated cd workflow2
 
 ## patches:
