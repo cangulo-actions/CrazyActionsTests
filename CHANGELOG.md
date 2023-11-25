@@ -1,3 +1,8 @@
+# 6.0.1 fix: enabled create-gh-release
+
+## patches:
+* fix: enabled create-gh-release
+
 # 6.0.0 test (#49)
 
 ## breaking changes:
