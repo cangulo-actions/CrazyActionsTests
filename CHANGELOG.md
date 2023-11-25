@@ -1,3 +1,12 @@
+# 7.0.0 test (#50)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: #123 random commit that fixes something
+
 # 6.0.1 fix: enabled create-gh-release
 
 ## patches:
