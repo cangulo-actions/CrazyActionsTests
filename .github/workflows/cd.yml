@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: semver
-        uses: cangulo-actions/semver@main
+        uses: cangulo-actions/semver@init
         id: semver
       - name: print semver output
         run: |
