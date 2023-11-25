@@ -1,3 +1,12 @@
+# 3.0.0 test (#43)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: #123 random commit that fixes something
+
 # 2.0.14 test (#42)
 
 ## patches:
