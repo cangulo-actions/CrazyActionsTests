@@ -1,3 +1,8 @@
+# 4.0.1 test (#45)
+
+## patches:
+* fix: #123 random commit that fixes something
+
 # 4.0.0 test (#44)
 
 ## breaking changes:
