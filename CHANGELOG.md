@@ -1,3 +1,8 @@
+# 8.0.1 fix: [cd.yml] updated to target cangulo-actions/semver@main
+
+## patches:
+* fix: [cd.yml] updated to target cangulo-actions/semver@main
+
 # 8.0.0 test (#52)
 
 ## breaking changes:
