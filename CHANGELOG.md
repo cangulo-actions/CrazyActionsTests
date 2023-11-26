@@ -1,3 +1,14 @@
+# 12.0.0 test semver pr1 commit (#127)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests
+## others
+* ---------
+
 # 11.0.1 fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#126)
 
 ## patches:
