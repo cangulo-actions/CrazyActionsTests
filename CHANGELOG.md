@@ -1,3 +1,8 @@
+# 20.0.2 fix: [cd.yml] updated to cangulo-actions/semver@refactor-workflows (#145)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@refactor-workflows (#145)
+
 # 20.0.1 fix: updated CD to use (#144)
 
 ## patches:
