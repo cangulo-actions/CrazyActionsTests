@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: semver
-        uses: cangulo-actions/semver@main
+        uses: cangulo-actions/semver@test-semver-pr1-commit
         id: semver
         with:
           create-gh-release: true
