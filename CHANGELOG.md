@@ -1,3 +1,14 @@
+# 19.0.0 test semver pr3 commit (#141)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@fix-ci
+## others
+* ---------
+
 # 18.0.1 fix: [cd.yml] updated to cangulo-actions/semver@fix-ci (#140)
 
 ## patches:
