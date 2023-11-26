@@ -1,3 +1,8 @@
+# 9.0.11 fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#116)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#116)
+
 # 9.0.10 fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#115)
 
 ## patches:
