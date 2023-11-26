@@ -1,3 +1,8 @@
+# 10.0.1 fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#124)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#124)
+
 # 10.0.0 test semver pr1 commit (#123)
 
 ## breaking changes:
