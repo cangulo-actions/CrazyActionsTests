@@ -1,3 +1,13 @@
+# 8.2.0 test (#73)
+
+## new features:
+* feat: random commit that adds a feature
+* feat: random commit that adds another feature
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests
+## others
+* ---------
+
 # 8.1.1 fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#72)
 
 ## patches:
