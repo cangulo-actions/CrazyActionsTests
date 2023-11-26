@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: semver
-        uses: cangulo-actions/semver@fix-ci
+        uses: cangulo-actions/semver@add-release-link
         id: semver
         with:
           create-gh-release: true
