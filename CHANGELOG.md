@@ -1,3 +1,8 @@
+# 20.0.1 fix: updated CD to use (#144)
+
+## patches:
+* fix: updated CD to use (#144)
+
 # 20.0.0 test semver pr3 commit (#143)
 
 ## breaking changes:
