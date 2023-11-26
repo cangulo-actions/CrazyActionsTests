@@ -1,3 +1,8 @@
+# 8.2.1 fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#74)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@add-e2e-tests (#74)
+
 # 8.2.0 test (#73)
 
 ## new features:
