@@ -1,3 +1,8 @@
+# 19.0.1 fix: [cd.yml] updated to cangulo-actions/semver@add-release-link (#142)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@add-release-link (#142)
+
 # 19.0.0 test semver pr3 commit (#141)
 
 ## breaking changes:
