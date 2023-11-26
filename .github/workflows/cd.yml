@@ -11,8 +11,12 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_AUTOMATION_TOKEN }} 
+
       - name: semver
-        uses: cangulo-actions/semver@add-release-link
+        # this must target main or a valid branch in the cangulo-actions/semver repo
+        uses: cangulo-actions/semver@main
         id: semver
         with:
           create-gh-release: true
