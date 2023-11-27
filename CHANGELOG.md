@@ -1,3 +1,8 @@
+# 21.0.1 fix: [cd.yml] updated to cangulo-actions/semver@refactor-workflows (#147)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@refactor-workflows (#147)
+
 # 21.0.0 test semver pr3 commit (#146)
 
 ## breaking changes:
