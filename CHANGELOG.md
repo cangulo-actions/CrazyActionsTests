@@ -1,3 +1,8 @@
+# 26.0.1 fix: [cd.yml] updated to cangulo-actions/semver@clean (#169)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@clean (#169)
+
 # 26.0.0 test semver pr3 commit (#166)
 
 ## breaking changes:
