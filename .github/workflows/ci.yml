@@ -1,0 +1,26 @@
+name: 🛞 continuous-integration
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-commits:
+    name: 🚔️ Validate Commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: commits
+        # this must target main or a valid branch in the cangulo-actions/conventional-commits-validator repo
+        uses: cangulo-actions/conventional-commits-validator@init
+        id: commits
+        with:
+          print-summary: true
+      - name: print commits output
+        run: |
+          echo "release-triggered:  ${{ steps.commits.outputs.release-triggered }}"
+          echo "next-version:       ${{ steps.commits.outputs.next-version }}"
+
+
+# refresh 2023-11-27
