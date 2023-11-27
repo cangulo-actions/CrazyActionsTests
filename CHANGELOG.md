@@ -1,3 +1,8 @@
+# 23.0.1 fix: [cd.yml] updated to cangulo-actions/semver@fix-e2e (#156)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@fix-e2e (#156)
+
 # 23.0.0 test semver pr3 commit (#154)
 
 ## breaking changes:
