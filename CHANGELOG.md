@@ -1,3 +1,8 @@
+# 22.0.2 fix: [cd.yml] updated to cangulo-actions/semver@fix-summary (#152)
+
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@fix-summary (#152)
+
 # 22.0.1 fix: [cd.yml] updated to cangulo-actions/semver@fix-summary (#151)
 
 ## patches:
