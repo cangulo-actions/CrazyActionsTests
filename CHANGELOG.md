@@ -1,3 +1,14 @@
+# 21.0.0 test semver pr3 commit (#146)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@refactor-workflows
+## others
+* ---------
+
 # 20.0.2 fix: [cd.yml] updated to cangulo-actions/semver@refactor-workflows (#145)
 
 ## patches:
