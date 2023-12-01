@@ -1,3 +1,8 @@
+# 31.0.1 fix: commit that fixes a bug (#198)
+
+## patches:
+* fix: commit that fixes a bug (#198)
+
 # 31.0.0 test semver pr3 commit break (#189)
 
 ## breaking changes:
