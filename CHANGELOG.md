@@ -1,3 +1,14 @@
+# 29.0.0 test semver pr3 commit (#178)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@clean
+## others
+* ---------
+
 # 28.0.1 fix: [cd.yml] updated to cangulo-actions/semver@clean (#176)
 
 ## patches:
