@@ -1,3 +1,8 @@
+# 35.0.2 fix: GH rename step
+
+## patches:
+* fix: GH rename step
+
 # 35.0.1 fix: renamed CI
 
 ## patches:
