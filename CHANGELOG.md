@@ -1,3 +1,8 @@
+# 35.0.3 fix: commit that fixes a bug (#266)
+
+## patches:
+* fix: commit that fixes a bug (#266)
+
 # 35.0.2 fix: GH rename step
 
 ## patches:
