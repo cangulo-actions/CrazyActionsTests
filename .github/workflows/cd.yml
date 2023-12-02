@@ -16,7 +16,7 @@ jobs:
 
       - name: semver
         # this must target main or a valid branch in the cangulo-actions/semver repo
-        uses: cangulo-actions/semver@test-gh-action
+        uses: cangulo-actions/semver@main
         id: semver
         with:
           create-gh-release: true
