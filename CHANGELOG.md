@@ -1,3 +1,8 @@
+# 34.0.1 fix: added ci.yml for testing cangulo-actions/conventional-commits-validator
+
+## patches:
+* fix: added ci.yml for testing cangulo-actions/conventional-commits-validator
+
 # 34.0.0 test semver pr3 commit break (#207)
 
 ## breaking changes:
