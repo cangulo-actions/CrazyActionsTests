@@ -1,3 +1,8 @@
+# 34.0.2 fix: commit that fixes a bug (#211)
+
+## patches:
+* fix: commit that fixes a bug (#211)
+
 # 34.0.1 fix: added ci.yml for testing cangulo-actions/conventional-commits-validator
 
 ## patches:
