@@ -1,3 +1,8 @@
+# 35.0.1 fix: renamed CI
+
+## patches:
+* fix: renamed CI
+
 # 35.0.0 test semver pr3 commit break (#212)
 
 ## breaking changes:
