@@ -1,3 +1,8 @@
+# 37.0.1 fix: Added src/lambda1 and terraform/main.tf
+
+## patches:
+* fix: Added src/lambda1 and terraform/main.tf
+
 # 37.0.0 test semver pr3 commit break (#271)
 
 ## breaking changes:
