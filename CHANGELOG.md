@@ -1,3 +1,8 @@
+# 38.0.1 fix: commit that fixes a bug (#278)
+
+## patches:
+* fix: commit that fixes a bug (#278)
+
 # 38.0.0 test semver pr3 commit break (#275)
 
 ## breaking changes:
