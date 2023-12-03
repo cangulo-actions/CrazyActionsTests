@@ -1,3 +1,8 @@
+# 37.0.2 fix: commit that fixes a bug (#274)
+
+## patches:
+* fix: commit that fixes a bug (#274)
+
 # 37.0.1 fix: Added src/lambda1 and terraform/main.tf
 
 ## patches:
