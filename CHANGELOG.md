@@ -1,3 +1,8 @@
+# 39.0.1 fix: updated cd to print semver output in the GH summary and updated readme
+
+## patches:
+* fix: updated cd to print semver output in the GH summary and updated readme
+
 # 39.0.0 test semver pr3 commit break (#279)
 
 ## breaking changes:
