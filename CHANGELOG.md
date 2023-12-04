@@ -1,3 +1,8 @@
+# 41.0.3 fix: commit that fixes a bug (#290)
+
+## patches:
+* fix: commit that fixes a bug (#290)
+
 # 41.0.2 fix(src,tfm): [attempt 3] created initial versions (#288)
 
 ## patches:
