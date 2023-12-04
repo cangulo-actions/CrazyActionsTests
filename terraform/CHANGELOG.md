@@ -1,3 +1,8 @@
+# 0.0.4 fix(src,tfm): [attempt 5] created initial versions (#311)
+
+## patches:
+* fix(src,tfm): [attempt 5] created initial versions (#311)
+
 # 0.0.3 fix(src,tfm): [attempt 4] created initial versions (#304)
 
 ## patches:
