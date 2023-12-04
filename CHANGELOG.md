@@ -1,3 +1,8 @@
+# 39.0.2 fix: commit that fixes a bug (#281)
+
+## patches:
+* fix: commit that fixes a bug (#281)
+
 # 39.0.1 fix: updated cd to print semver output in the GH summary and updated readme
 
 ## patches:
