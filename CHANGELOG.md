@@ -1,3 +1,8 @@
+# 50.0.1 fix: test semver PR 41 - reset release cycle before running cangulo-actions/semver tests
+
+## patches:
+* fix: test semver PR 41 - reset release cycle before running cangulo-actions/semver tests
+
 # 50.0.0 test semver pr41 3 commit break (#321)
 
 ## breaking changes:
