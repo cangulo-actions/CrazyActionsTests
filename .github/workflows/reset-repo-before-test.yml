@@ -12,11 +12,46 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.GH_AUTOMATION_TOKEN }} 
+          fetch-depth: 0
 
-      - name: checkout
+      - name: configure git
         run: |
           git config user.name "cangulo-actions-reset-repo[bot]"
           git config user.email "cangulo-actions-reset-repo[bot]@users.noreply.github.com"
-          git add .
-          git commit --allow-empty -m "fix: reset repo before test"
-          git push
+
+      - name: delete all the remote tags
+        run: |
+          remote_tags=($(git ls-remote --tags origin | awk '{print $2}' | awk -F"/" '{print $3}'))
+          for tag in "${remote_tags[@]}"
+          do
+            echo "deleting tag ${tag}"
+            git push origin :refs/tags/"${tag}"
+          done
+        
+
+      - name: delete all the GH releases
+        env:
+          GH_TOKEN: ${{ secrets.GH_AUTOMATION_TOKEN }}
+        run: |
+          gh_releases=($(gh release list | awk '{print $1}'))
+          for release in "${gh_releases[@]}"
+          do
+            echo "deleting release ${release}"
+            gh release delete "${release}" --yes
+          done
+          
+      - name: reset files
+        run: |
+          # delete version.json and CHANGELOG.md
+          git rm -f version.json CHANGELOG.md
+          scope_folders=( "src" "terraform" )
+          for folder in "${scope_folders[@]}"
+          do
+            # delete version and CHANGELOG.md
+            git rm -f "${folder}/version.json" "${folder}/CHANGELOG.md"
+          done
+
+      - name: commit changes
+        run: |
+          git commit -a -m "RESET REPO [SKIP]"
+          git push origin main
