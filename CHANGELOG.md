@@ -1,3 +1,8 @@
+# 48.0.3 fix: commit that fixes a bug (#315)
+
+## patches:
+* fix: commit that fixes a bug (#315)
+
 # 48.0.2 fix(src,tfm): [attempt 6] created initial versions (#313)
 
 ## patches:
