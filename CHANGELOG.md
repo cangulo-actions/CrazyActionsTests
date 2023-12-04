@@ -1,3 +1,8 @@
+# 50.0.5 fix: created workflow for resetting the repo (#326)
+
+## patches:
+* fix: created workflow for resetting the repo (#326)
+
 # 50.0.4 fix: test semver PR 90 - reset release cycle before running cangulo-actions/semver tests (#325)
 
 ## patches:
