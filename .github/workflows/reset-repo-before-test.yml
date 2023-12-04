@@ -56,5 +56,9 @@ jobs:
 
       - name: commit changes
         run: |
-          git commit -a -m "RESET REPO [SKIP]"
-          git push origin main
+          if [[ -n $(git status -s) ]]; then
+            git commit -a -m "RESET REPO [SKIP]"
+            git push origin main
+          else
+            echo "No changes to commit."
+          fi
