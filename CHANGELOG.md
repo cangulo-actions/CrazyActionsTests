@@ -1,3 +1,8 @@
+# 51.0.1 fix: reset repo before test
+
+## patches:
+* fix: reset repo before test
+
 # 51.0.0 test semver pr41 3 commit break (#330)
 
 ## breaking changes:
