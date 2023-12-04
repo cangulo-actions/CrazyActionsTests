@@ -1,3 +1,8 @@
+# 54.0.3 fix: reset repo before test
+
+## patches:
+* fix: reset repo before test
+
 # 54.0.2 fix: reset repo before test
 
 ## patches:
