@@ -1,3 +1,8 @@
+# 0.0.3 fix: created workflow for resetting the repo
+
+## patches:
+* fix: created workflow for resetting the repo
+
 # 0.0.2 fix: created workflow for resetting the repo (#348)
 
 ## patches:
