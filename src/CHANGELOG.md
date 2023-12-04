@@ -1,3 +1,8 @@
+# 0.0.6 fix(src,tfm): [attempt 7] created initial versions (#317)
+
+## patches:
+* fix(src,tfm): [attempt 7] created initial versions (#317)
+
 # 0.0.5 fix(src,tfm): [attempt 6] created initial versions (#313)
 
 ## patches:
