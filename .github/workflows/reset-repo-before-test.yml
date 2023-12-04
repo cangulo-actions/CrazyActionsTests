@@ -21,13 +21,15 @@ jobs:
 
       - name: delete all the remote tags
         run: |
+          echo "tags:"
+          git ls-remote --tags origin 
+
           remote_tags=($(git ls-remote --tags origin | awk '{print $2}' | awk -F"/" '{print $3}'))
           for tag in "${remote_tags[@]}"
           do
             echo "deleting remote tag ${tag}"
             git push origin --delete "${tag}"
           done
-        
 
       - name: delete all the GH releases
         env:
@@ -42,13 +44,14 @@ jobs:
           
       - name: reset files
         run: |
-          # delete version.json and CHANGELOG.md
-          git rm -f version.json CHANGELOG.md
+          # delete version.json and CHANGELOG.md if exists
+          
+          git rm -f version.json CHANGELOG.md || true
           scope_folders=( "src" "terraform" )
           for folder in "${scope_folders[@]}"
           do
             # delete version and CHANGELOG.md
-            git rm -f "${folder}/version.json" "${folder}/CHANGELOG.md"
+            git rm -f "${folder}/version.json" "${folder}/CHANGELOG.md" || true
           done
 
       - name: commit changes
