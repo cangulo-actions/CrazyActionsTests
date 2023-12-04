@@ -1,3 +1,8 @@
+# 50.0.4 fix: test semver PR 90 - reset release cycle before running cangulo-actions/semver tests (#325)
+
+## patches:
+* fix: test semver PR 90 - reset release cycle before running cangulo-actions/semver tests (#325)
+
 # 50.0.3 fix: test semver PR 18 - reset release cycle before running cangulo-actions/semver tests (#324)
 
 ## patches:
