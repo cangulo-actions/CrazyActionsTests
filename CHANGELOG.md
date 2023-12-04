@@ -1,3 +1,11 @@
+# 50.0.7 create reset workflow (#327)
+
+## patches:
+* fix: created workflow for resetting the repo
+* fix: rename workflow
+## others
+* ---------
+
 # 50.0.6 fix: reset repo before test
 
 ## patches:
