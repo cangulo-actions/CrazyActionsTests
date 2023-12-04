@@ -1,3 +1,8 @@
+# 56.0.1 fix: reset repo before test
+
+## patches:
+* fix: reset repo before test
+
 # 56.0.0 test semver pr41 push 3 commits break (#342)
 
 ## breaking changes:
