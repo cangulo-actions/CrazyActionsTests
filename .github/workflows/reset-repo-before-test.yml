@@ -1,0 +1,22 @@
+name: 🚀 reset repo before test
+on:
+  workflow_dispatch:
+
+jobs:
+  semver:
+    name: release new version
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GH_AUTOMATION_TOKEN }} 
+
+      - name: checkout
+        run: |
+          git config user.name "cangulo-actions-reset-repo[bot]"
+          git config user.email "cangulo-actions-reset-repo[bot]@users.noreply.github.com"
+          git add .
+          git commit --allow-empty -m "fix: reset repo before test"
+          git push
