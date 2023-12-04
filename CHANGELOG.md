@@ -1,3 +1,8 @@
+# 46.0.2 fix: commit that fixes a bug (#306)
+
+## patches:
+* fix: commit that fixes a bug (#306)
+
 # 46.0.1 fix(src,tfm): [attempt 4] created initial versions (#304)
 
 ## patches:
