@@ -1,3 +1,14 @@
+# 55.0.0 test semver pr41 push 3 commits break (#339)
+
+## breaking changes:
+* break: #123 random commit that breaks something
+## new features:
+* feat: #123 random commit that adds a feature
+## patches:
+* fix: [cd.yml] updated to cangulo-actions/semver@#38
+## others
+* ---------
+
 # 54.0.4 test semver pr41 push 1 commit fix (#338)
 
 ## patches:
