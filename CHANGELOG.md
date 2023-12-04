@@ -1,3 +1,8 @@
+# 42.0.1 fix: commit that fixes a bug (#293)
+
+## patches:
+* fix: commit that fixes a bug (#293)
+
 # 42.0.0 test semver pr3 commit break (#291)
 
 ## breaking changes:
