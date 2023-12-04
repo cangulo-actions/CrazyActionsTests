@@ -1,3 +1,8 @@
+# 50.0.6 fix: reset repo before test
+
+## patches:
+* fix: reset repo before test
+
 # 50.0.5 fix: created workflow for resetting the repo (#326)
 
 ## patches:
