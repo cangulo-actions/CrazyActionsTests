@@ -6,6 +6,8 @@ jobs:
   reset:
     name: commit fix to reset repo
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_AUTOMATION_TOKEN }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -32,8 +34,6 @@ jobs:
           done
 
       - name: delete all the GH releases
-        env:
-          GH_TOKEN: ${{ secrets.GH_AUTOMATION_TOKEN }}
         run: |
           gh_releases=($(gh release list | awk '{print $1}'))
           for release in "${gh_releases[@]}"
