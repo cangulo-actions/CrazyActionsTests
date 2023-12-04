@@ -1,10 +1,10 @@
-name: 🚀 reset repo before test
+name:  reset repo before test
 on:
   workflow_dispatch:
 
 jobs:
-  semver:
-    name: release new version
+  reset:
+    name: commit fix to reset repo
     runs-on: ubuntu-latest
     steps:
       - name: checkout
