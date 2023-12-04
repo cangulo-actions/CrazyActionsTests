@@ -1,3 +1,8 @@
+# 53.0.3 fix: commit that fixes a bug (#336)
+
+## patches:
+* fix: commit that fixes a bug (#336)
+
 # 53.0.2 fix: reset repo before test
 
 ## patches:
