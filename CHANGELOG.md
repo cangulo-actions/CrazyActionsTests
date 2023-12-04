@@ -1,3 +1,8 @@
+# 49.0.2 fix: commit that fixes a bug (#320)
+
+## patches:
+* fix: commit that fixes a bug (#320)
+
 # 49.0.1 fix(src,tfm): [attempt 7] created initial versions (#317)
 
 ## patches:
