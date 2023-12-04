@@ -1,3 +1,8 @@
+# 50.0.10 fix: reset repo before test
+
+## patches:
+* fix: reset repo before test
+
 # 50.0.9 fix: reset repo before test
 
 ## patches:
