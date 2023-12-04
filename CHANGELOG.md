@@ -1,3 +1,11 @@
+# 50.0.16 test semver pr41 1 commit fix (#329)
+
+## patches:
+* fix: commit that fixes a bug
+## others
+* ci: updated [cd.yml] to use cangulo-actions/semver@#38
+* ---------
+
 # 50.0.15 fix: reset repo before test
 
 ## patches:
