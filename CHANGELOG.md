@@ -1,3 +1,8 @@
+# 40.0.1 fix: commit that fixes a bug (#284)
+
+## patches:
+* fix: commit that fixes a bug (#284)
+
 # 40.0.0 test semver pr3 commit break (#282)
 
 ## breaking changes:
