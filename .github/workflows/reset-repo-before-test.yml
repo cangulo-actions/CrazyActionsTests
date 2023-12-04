@@ -19,16 +19,16 @@ jobs:
           git config user.name "cangulo-actions-reset-repo[bot]"
           git config user.email "cangulo-actions-reset-repo[bot]@users.noreply.github.com"
 
-      - name: delete all the remote tags
+      - name: delete all the remote tags using the GH cli
         run: |
           echo "tags:"
           git ls-remote --tags origin 
 
-          remote_tags=($(git ls-remote --tags origin | awk '{print $2}' | awk -F"/" '{print $3}' | sed 's/\^{}//'))
+          remote_tags=($(gh api repos/${{ github.repository }}/git/refs/tags | jq -r '.[].ref' | awk -F '/' '{print $NF}'))
           for tag in "${remote_tags[@]}"
           do
             echo "deleting remote tag ${tag}"
-            git push origin --delete "${tag}"
+            gh api repos/${{ github.repository }}/git/refs/tags/${tag} -X DELETE
           done
 
       - name: delete all the GH releases
