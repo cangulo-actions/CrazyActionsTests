@@ -24,8 +24,8 @@ jobs:
           remote_tags=($(git ls-remote --tags origin | awk '{print $2}' | awk -F"/" '{print $3}'))
           for tag in "${remote_tags[@]}"
           do
-            echo "deleting tag ${tag}"
-            git push origin :refs/tags/"${tag}"
+            echo "deleting remote tag ${tag}"
+            git push origin --delete "${tag}"
           done
         
 
