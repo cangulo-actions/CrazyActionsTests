@@ -1,3 +1,8 @@
+# 55.0.2 fix: commit that fixes a bug (#341)
+
+## patches:
+* fix: commit that fixes a bug (#341)
+
 # 55.0.1 fix: reset repo before test
 
 ## patches:
