@@ -29,7 +29,6 @@ jobs:
         with:
           script: |
             const semverOutputs = JSON.parse(process.env.SEMVER_OUTPUTS)
-
             console.log('semverOutputs', semverOutputs)
 
             core.summary
