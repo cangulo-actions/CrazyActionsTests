@@ -1,6 +1,11 @@
-name: 🛎️ reset repo before test
+name: 🛎️ reset repo
 on:
   workflow_dispatch:
+    inputs:
+      semver-version:
+        description: 'cangulo-actions/semver version to test'
+        required: true
+        default: ''
 
 jobs:
   reset:
@@ -54,10 +59,19 @@ jobs:
             git rm -f "${folder}/version.json" "${folder}/CHANGELOG.md" || true
           done
 
+      - name: update cd.yml with semver version
+        if: ${{ github.event.inputs.semver-version != '' }}
+        env:
+          SEMVER_VERSION: ${{ github.event.inputs.semver-version }}
+        run: |
+          # delete version.json and CHANGELOG.md if exists
+          
+          sed -i s|cangulo-actions/semver@.*|cangulo-actions/semver@$SEMVER_VERSION|g .github/workflows/cd.yml
+
       - name: commit changes
         run: |
           if [[ -n $(git status -s) ]]; then
-            git commit -a -m "RESET REPO [SKIP]"
+            git commit -a -m "RESET REPO [skip ci]"
             git push origin main
           else
             echo "No changes to commit."
