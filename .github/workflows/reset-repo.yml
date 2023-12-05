@@ -1,21 +1,42 @@
 name: 🛎️ reset repo
 run-name: >
-  🛎️ reset repo ${{ inputs.semver-version != '' && format('semver-version: {0}', inputs.semver-version) || '' }}
+  🛎️ reset repo ${{ inputs.semver-version != '' && format('semver-version: {0}', inputs.semver-version) || '' }} 
+    ${{ inputs.enable-ci-workflow && 'enable ci workflow' || 'disable ci workflow' }}
 on:
   workflow_dispatch:
     inputs:
       semver-version:
         description: 'cangulo-actions/semver version to test'
+        type: string
         required: false
         default: ''
+      enable-ci-workflow:
+        description: 'enable ci.yml workflow'
+        type: boolean
+        required: false
+        default: false
 
 jobs:
   reset:
-    name: commit fix to reset repo
+    name: 💣️ reset repo
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GH_AUTOMATION_TOKEN }}
     steps:
+      - name: Printing inputs in the summary
+        uses: actions/github-script@v7.0.1
+        env:
+          INPUTS: ${{ toJson(inputs) }}
+        with:
+          script: |
+            const inputs = JSON.parse(process.env.INPUTS)
+            console.log('inputs', inputs)
+
+            core.summary
+              .addHeading('Inputs')
+              .addCodeBlock(JSON.stringify(inputs, null, 2), 'json')
+              .write()
+
       - name: checkout
         uses: actions/checkout@v4
         with:
@@ -23,7 +44,7 @@ jobs:
           token: ${{ secrets.GH_AUTOMATION_TOKEN }} 
           fetch-depth: 0
 
-      - name: configure git
+      - name: configuring git
         run: |
           git config user.name "cangulo-actions-reset-repo[bot]"
           git config user.email "cangulo-actions-reset-repo[bot]@users.noreply.github.com"
@@ -62,11 +83,15 @@ jobs:
           done
 
       - name: update cd.yml with semver version
-        if: ${{ github.event.inputs.semver-version != '' }}
+        if: ${{ inputs.semver-version != '' }}
         env:
-          SEMVER_VERSION: ${{ github.event.inputs.semver-version }}
+          SEMVER_VERSION: ${{ inputs.semver-version }}
         run: |
           sed -i "s/cangulo-actions\/semver@.*/cangulo-actions\/semver@${SEMVER_VERSION}/g" .github/workflows/cd.yml
+
+      - name: enable/disable ci.yml workflow
+        run: |
+          gh workflow ${{ inputs.enable-ci-workflow && 'enable' || 'disable' }} ci.yml
 
       - name: commit changes
         run: |
