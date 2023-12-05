@@ -1,7 +1,8 @@
 name: 🛎️ reset repo
 run-name: >
-  🛎️ reset repo ${{ inputs.semver-version != '' && format('semver-version: {0}', inputs.semver-version) || '' }} 
-    ${{ inputs.enable-ci-workflow && 'enable ci workflow' || 'disable ci workflow' }}
+  🛎️ reset repo |
+   ${{ inputs.semver-version != '' && format('semver-version: {0}', inputs.semver-version) || '' }} 
+   ${{ inputs.enable-ci-workflow && 'enable ci workflow' || 'disable ci workflow' }}
 on:
   workflow_dispatch:
     inputs:
@@ -15,6 +16,10 @@ on:
         type: boolean
         required: false
         default: false
+
+concurrency: 
+  group: reset-repo
+  cancel-in-progress: false
 
 jobs:
   reset:
@@ -91,7 +96,7 @@ jobs:
 
       - name: enable/disable ci.yml workflow
         run: |
-          gh workflow ${{ inputs.enable-ci-workflow && 'enable' || 'disable' }} ci.yml
+          gh workflow ${{ inputs.enable-ci-workflow && 'enable' || 'disable' }} ci.yml || true
 
       - name: commit changes
         run: |
