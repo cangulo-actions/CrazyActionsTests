@@ -4,7 +4,7 @@ on:
     inputs:
       semver-version:
         description: 'cangulo-actions/semver version to test'
-        required: true
+        required: false
         default: ''
 
 jobs:
