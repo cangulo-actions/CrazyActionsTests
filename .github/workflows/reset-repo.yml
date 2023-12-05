@@ -1,5 +1,6 @@
 name: 🛎️ reset repo
-run-name: "🛎️ reset repo semver: ${{ inputs.semver-version }}"
+run-name: >
+  🛎️ reset repo ${{ inputs.semver-version != '' && format('semver-version: {0}', inputs.semver-version) || '' }}
 on:
   workflow_dispatch:
     inputs:
