@@ -1,3 +1,8 @@
+# 0.4.0 test semver pr LOCAl TEST (#533)
+
+## new features:
+* feat(tfm): commit that adds a feature in terraform
+
 # 0.3.0 test semver pr LOCAl TEST (#532)
 
 ## new features:

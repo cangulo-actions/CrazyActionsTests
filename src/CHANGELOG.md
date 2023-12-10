@@ -1,3 +1,8 @@
+# 0.0.4 test semver pr LOCAl TEST (#533)
+
+## patches:
+* fix(src): commit that fixes something in the lambdas
+
 # 0.0.3 test semver pr LOCAl TEST (#532)
 
 ## patches:
