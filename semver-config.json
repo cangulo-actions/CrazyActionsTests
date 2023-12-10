@@ -13,16 +13,19 @@
             "release": "patch"
         },
         "refactor": {
-            "release": "patch"
+            "release": "none"
         },
         "chore": {
-            "release": "patch"
+            "release": "none"
         },
         "test": {
-            "release": "patch"
+            "release": "none"
         },
         "docs": {
-            "release": "patch"
+            "release": "none"
+        },
+        "ci" : {
+            "release": "none"
         }
     },
     "scopes": {

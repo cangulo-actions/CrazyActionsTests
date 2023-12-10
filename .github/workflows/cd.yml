@@ -16,12 +16,13 @@ jobs:
 
       - name: semver
         # this must target main or a valid branch in the cangulo-actions/semver repo
-        uses: cangulo-actions/semver@main
+        uses: cangulo-actions/semver@#33
         id: semver
         with:
+          configuration: semver-config.json
           create-gh-release: true
           print-summary: true
-          # configuration: semver-config.json
+          print-annotations: true
       - name: add semver output to GH summary
         uses: actions/github-script@v7
         env:
