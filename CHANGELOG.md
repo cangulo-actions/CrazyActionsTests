@@ -1,3 +1,14 @@
+# 3.0.0 semver pr55 1 4 commits with scope (#521)
+
+## breaking changes:
+* break: commit that introduce a breking change
+## new features:
+* feat(tfm): commit that adds a feature
+## patches:
+* fix(src): commit that fixes something
+## others
+* ---------
+
 # 2.0.0 semver pr55 1 4 commits (#520)
 
 ## breaking changes:
