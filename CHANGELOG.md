@@ -1,3 +1,14 @@
+# 2.0.0 semver pr55 1 4 commits (#513)
+
+## breaking changes:
+* break: commit that introduce a breking change
+## new features:
+* feat: commit that adds a feature
+## patches:
+* fix: commit that fixes something
+## others
+* ---------
+
 # 1.0.0 break: commit that introduces a breaking change (#512)
 
 ## breaking changes:
