@@ -1,1 +1,1 @@
-cp -r ./cypress/* ../semver/cypress/
+cp -r ./cypress/* ../semver/cypress/cypress/
