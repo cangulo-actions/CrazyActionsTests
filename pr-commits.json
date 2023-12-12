@@ -24,7 +24,7 @@
         "docs": {
             "release": "none"
         },
-        "ci" : {
+        "ci": {
             "release": "none"
         }
     },
@@ -33,12 +33,13 @@
             "versioning": {
                 "file": "terraform/version.json",
                 "changelog": "terraform/CHANGELOG.md"
-            },           "files":[
+            },
+            "files": [
                 "terraform/**"
             ]
         },
         "src": {
-            "files":[
+            "files": [
                 "src/**"
             ]
         }

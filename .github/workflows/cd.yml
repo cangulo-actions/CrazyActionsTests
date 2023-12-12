@@ -16,13 +16,14 @@ jobs:
 
       - name: semver
         # this must target main or a valid branch in the cangulo-actions/semver repo
-        uses: cangulo-actions/semver@main
+        uses: cangulo-actions/semver@#54
         id: semver
         with:
-          configuration: semver-config.json
+          configuration: semver.yml
           create-gh-release: true
           print-summary: true
           print-annotations: true
+
       - name: add semver output to GH summary
         uses: actions/github-script@v7
         env:
@@ -33,8 +34,30 @@ jobs:
             console.log('semverOutputs', semverOutputs)
 
             core.summary
-              .addHeading('Semver Output:')
+              .addHeading('Semver Output in JSON:')
               .addCodeBlock(JSON.stringify(semverOutputs, null, 2), 'json')
-              .write()      
+              .write()
+
+      - name: print semver if new version released
+        if: ${{ steps.semver.outputs.new-version-released }}
+        env:
+          CHANGES: ${{ steps.semver.outputs.changes }}
+          CHANGELOG_RECORD: ${{ steps.semver.outputs.changelog-record }}
+          SCOPES: ${{ steps.semver.outputs.scopes }}
+        run: |
+          echo "version:        ${{ steps.semver.outputs.version }}"
+          echo "release-title:  ${{ steps.semver.outputs.release-title }}"
+          echo "release-type:   ${{ steps.semver.outputs.release-type }}"
+          echo "release-url:    ${{ steps.semver.outputs.release-url }}"
+          echo "commit-id:      ${{ steps.semver.outputs.commit-id }}"
+
+          echo "changes:"
+          echo "$CHANGES" | jq .
+
+          echo "changes-log:"
+          echo "$CHANGELOG_RECORD"
+
+          echo "scopes:"
+          echo "$SCOPES" | jq .
 
 # refresh 2023-11-27
