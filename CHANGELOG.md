@@ -1,3 +1,14 @@
+# 2.0.0 test semver pr 56 (#599)
+
+## breaking changes:
+* break: commit that introduce a breaking change
+## new features:
+* feat: commit that adds a feature
+## patches:
+* fix: commit that fixes something
+## others
+* ---------
+
 # 1.0.0 break: commit that introduces a breaking change (#598)
 
 ## breaking changes:
