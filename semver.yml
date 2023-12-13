@@ -19,6 +19,6 @@ commits:
 scopes:
 - key: tfm
   version:
-  - file: terraform/version.json
-  changelog: terraform/CHANGELOG.md
+    file: terraform/version.json
+    changelog: terraform/CHANGELOG.md
 - key: src
