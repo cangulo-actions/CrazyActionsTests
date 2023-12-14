@@ -1,3 +1,8 @@
+# 0.1.0 feat: commit that adds a feature (#625)
+
+## new features:
+* feat: commit that adds a feature (#625)
+
 # 0.0.1 fix: commit that fixes something (#623)
 
 ## patches:
