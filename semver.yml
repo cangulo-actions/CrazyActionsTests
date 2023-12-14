@@ -14,7 +14,7 @@ commits:
 - type: docs
   release: none
 - type: ci
-  release: none
+  release2: none
 
 scopes:
 - key: tfm
