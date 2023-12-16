@@ -1,3 +1,8 @@
+# 1.0.0 break: commit that introduces a breaking change (#708)
+
+## breaking changes:
+* break: commit that introduces a breaking change (#708)
+
 # 0.1.0 feat: commit that adds a feature (#707)
 
 ## new features:
