@@ -6,7 +6,7 @@ on:
 
 jobs:
   semver:
-    name: release new version
+    name: test cangulo-actions/semver@#61
     runs-on: ubuntu-latest
     steps:
       - name: checkout
