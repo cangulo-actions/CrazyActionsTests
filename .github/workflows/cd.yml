@@ -6,7 +6,7 @@ on:
 
 jobs:
   semver:
-    name: test cangulo-actions/semver@main
+    name: test cangulo-actions/semver@#61
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -16,7 +16,7 @@ jobs:
 
       - name: semver
         # this must target main or a valid branch in the cangulo-actions/semver repo
-        uses: cangulo-actions/semver@main
+        uses: cangulo-actions/semver@#61
         id: semver
         with:
           configuration: semver.yml
