@@ -1,4 +1,4 @@
 echo "Importing Cypress tests from cangulo-actions/semver"
 
-rm -rf ./cypress
-cp -r ../semver/cypress/* ./
+rm -rf ./cypress                --verbose
+cp -r ../semver/cypress/* ./    --verbose
