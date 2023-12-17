@@ -7,7 +7,7 @@ on:
 jobs:
   semver:
     # do not change the name, it is used in the cypress test to find the check runs of this job
-    name: test cangulo-actions/semver@main
+    name: test cangulo-actions/semver
     runs-on: ubuntu-latest
     steps:
       - name: checkout
