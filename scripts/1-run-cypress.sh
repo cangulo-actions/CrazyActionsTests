@@ -8,8 +8,8 @@ repo="CrazyActionsTests"
 export CYPRESS_GH_TOKEN=$(gh auth token)
 export CYPRESS_GH_API_URL="https://api.github.com/repos/${owner}/${repo}"
 export CYPRESS_SEMVER_BRANCH="main"
-export CYPRESS_SEMVER_PR_NUMBER="LOCAl-TEST"
-export CYPRESS_BRANCH_TO_CREATE="LOCAl-TEST"
+export CYPRESS_SEMVER_PR_NUMBER="LOCAL-TEST"
+export CYPRESS_BRANCH_TO_CREATE="LOCAL-TEST"
 
 export CYPRESS_BEFORE_ALL_RESET_REPO_ENABLED="false"
 export CYPRESS_AFTER_ALL_RESET_REPO_ENABLED="false"
