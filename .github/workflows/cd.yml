@@ -4,6 +4,10 @@ on:
     branches:
       - main
 
+concurrency: 
+  group: semver
+  cancel-in-progress: false
+
 jobs:
   semver:
     # do not change the name, it is used in the cypress test to find the check runs of this job
