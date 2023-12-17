@@ -1,3 +1,14 @@
+# 3.0.0 test semver pr 64 (#759)
+
+## breaking changes:
+* break: commit that introduce a breaking change
+## new features:
+* feat(tfm): commit that adds a feature in terraform
+## patches:
+* fix(src): commit that fixes something in the lambdas
+## others
+* ---------
+
 # 2.0.0 test semver pr 64 (#758)
 
 ## breaking changes:
