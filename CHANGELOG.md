@@ -1,3 +1,8 @@
+# 0.0.7 fix: commit that fixes something (#770)
+
+## patches:
+* fix: commit that fixes something (#770)
+
 # 0.0.6 fix: commit that fixes something (#768)
 
 ## patches:
