@@ -71,9 +71,6 @@ Cypress.Commands.add('closeAnyPendingPR', () => {
         url: `${pullsUrl}?state=open&head=cangulo-actions:${branch}`,
         headers: {
           Authorization: `token ${Cypress.env('GH_TOKEN')}`
-        },
-        body: {
-          merge_method: 'squash'
         }
       }
     )

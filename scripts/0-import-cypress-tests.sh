@@ -1,4 +1,4 @@
 echo "Importing Cypress tests from cangulo-actions/semver"
 
-rm -rf ./cypress                --verbose
-cp -r ../semver/cypress/* ./    --verbose
+rm -rf ./cypress                
+rsync -av --exclude='node_modules' ../semver/cypress/ ./    --verbose

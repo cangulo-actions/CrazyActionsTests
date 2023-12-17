@@ -1,8 +1,10 @@
 import { BeforeAll } from '@badeball/cypress-cucumber-preprocessor'
 
 BeforeAll(function () {
-  const enabled = Cypress.env('BEFORE_ALL_RESET_REPO_ENABLED')
-  if (enabled) {
+  const resetRepoEnabled = Cypress.env('BEFORE_ALL_RESET_REPO_ENABLED')
+  const closePRsEnabled = Cypress.env('BEFORE_ALL_CLOSE_ANY_PR')
+
+  if (resetRepoEnabled) {
     const waitTimeWorkflow = Cypress.env('GH_WORKFLOW_RESET_REPO_TIMEOUT')
     const semverBranchName = Cypress.env('SEMVER_BRANCH')
     const workflowId = 'reset-repo.yml'
@@ -18,10 +20,10 @@ BeforeAll(function () {
     cy
       .triggerWorkflow({ workflowId, workflowParams })
       .wait(waitTimeWorkflow)
-  } else {
-    console.log('trigger reset repo workflow skipped')
   }
 
-  // if any PR is pending because of a previous failing execution, close it
-  cy.closeAnyPendingPR()
+  if (closePRsEnabled) {
+    // if any PR is pending because of a previous failing execution, close it
+    cy.closeAnyPendingPR()
+  }
 })
