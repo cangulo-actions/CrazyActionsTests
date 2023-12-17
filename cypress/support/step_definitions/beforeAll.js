@@ -21,4 +21,7 @@ BeforeAll(function () {
   } else {
     console.log('trigger reset repo workflow skipped')
   }
+
+  // if any PR is pending because of a previous failing execution, close it
+  cy.closeAnyPendingPR()
 })
