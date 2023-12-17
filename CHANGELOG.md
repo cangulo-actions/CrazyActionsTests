@@ -1,3 +1,8 @@
+# 0.0.5 fix: commit that fixes something (#841)
+
+## patches:
+* fix: commit that fixes something (#841)
+
 # 0.0.4 LOCAL TEST (#840)
 
 ## patches:
