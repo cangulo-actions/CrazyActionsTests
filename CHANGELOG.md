@@ -1,3 +1,8 @@
+# 2.0.1 fix: commit that fixes something (#847)
+
+## patches:
+* fix: commit that fixes something (#847)
+
 # 2.0.0 multiple commits without scope (#846)
 
 ## breaking changes:
