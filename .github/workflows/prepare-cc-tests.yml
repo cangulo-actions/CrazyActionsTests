@@ -1,0 +1,75 @@
+name: 🗜️ Prepare repo for E2E tests 
+run-name: >
+  🗜️ Prepare repo for CC E2E tests |
+   cc-version: ${{ inputs.cc-version }} 
+   ${{ inputs.enable-ci-workflow && 'enable' || 'disable' }} ci workflow
+on:
+  workflow_dispatch:
+    inputs:
+      cc-version:
+        description: 'cangulo-actions/conventional-commits-validator version to test'
+        type: string
+        required: false
+        default: 'main'
+      enable-ci-workflow:
+        description: 'enable ci.yml workflow'
+        type: boolean
+        required: false
+        default: true
+
+concurrency: 
+  group: prepare-cc-tests
+  cancel-in-progress: false
+
+jobs:
+  reset:
+    name: 🪧 Configuring Repo
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_AUTOMATION_TOKEN }}
+    steps:
+      - name: Printing inputs in the summary
+        uses: actions/github-script@v7.0.1
+        env:
+          INPUTS: ${{ toJson(inputs) }}
+        with:
+          script: |
+            const inputs = JSON.parse(process.env.INPUTS)
+            console.log('inputs', inputs)
+
+            core.summary
+              .addHeading('Inputs')
+              .addCodeBlock(JSON.stringify(inputs, null, 2), 'json')
+              .write()
+
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GH_AUTOMATION_TOKEN }} 
+          fetch-depth: 0
+
+      - name: configuring git
+        run: |
+          git config user.name "cangulo-actions-reset-repo[bot]"
+          git config user.email "cangulo-actions-reset-repo[bot]@users.noreply.github.com"
+
+      - name: update cd.yml with conventional-commits-validator version
+        env:
+          CC_VERSION: ${{ inputs.cc-version }}
+        run: |
+          sed -i "s/cangulo-actions\/conventional-commits-validator@.*/cangulo-actions\/conventional-commits-validator@${CC_VERSION}/g" .github/workflows/ci.yml
+
+      - name: enable/disable ci.yml workflow
+        run: |
+          gh workflow ${{ inputs.enable-ci-workflow && 'enable' || 'disable' }} ci.yml || true
+
+      - name: commit changes
+        run: |
+          if [[ -n $(git status -s) ]]; then
+            git status -s
+            git commit -a -m "PREPARING CC E2E TESTS [skip ci]"
+            git push origin main
+          else
+            echo "No changes to commit."
+          fi
