@@ -7,7 +7,7 @@ repo="CrazyActionsTests"
 
 export CYPRESS_GH_TOKEN=$(gh auth token)
 export CYPRESS_GH_API_URL="https://api.github.com/repos/${owner}/${repo}"
-export CYPRESS_CC_BRANCH="main"
+export CYPRESS_CC_BRANCH="#8"
 export CYPRESS_CC_PR_NUMBER="LOCAL-TEST"
 export CYPRESS_BRANCH_TO_CREATE="LOCAL-TEST"
 

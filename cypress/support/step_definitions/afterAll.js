@@ -1,16 +1,17 @@
 import { AfterAll } from '@badeball/cypress-cucumber-preprocessor'
 
 AfterAll(function () {
-  const resetRepoEnabled = Cypress.env('AFTER_ALL_RESET_REPO_ENABLED')
+  const prepareRepoEnabled = Cypress.env('AFTER_ALL_PREPARE_REPO_ENABLED')
   const closePRsEnabled = Cypress.env('AFTER_ALL_CLOSE_ANY_PR')
 
-  if (resetRepoEnabled) {
-    const waitTimeWorkflow = Cypress.env('GH_WORKFLOW_RESET_REPO_TIMEOUT')
-    const workflowId = 'reset-repo.yml'
+  if (prepareRepoEnabled) {
+    const waitTimeWorkflow = Cypress.env('GH_WORKFLOW_PREPARE_REPO_TIMEOUT')
+    const ccBranchName = 'main'
+    const workflowId = 'prepare-cc-tests.yml'
     const workflowParams = {
       ref: 'main',
       inputs: {
-        'semver-version': 'main',
+        'cc-version': ccBranchName,
         'enable-ci-workflow': false
       }
     }

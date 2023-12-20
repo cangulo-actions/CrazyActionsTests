@@ -6,7 +6,7 @@ on:
 
 jobs:
   validate-commits:
-    name: validate commits
+    name: test cangulo-actions/conventional-commits-validator
     runs-on: ubuntu-latest
     steps:
       - name: checkout

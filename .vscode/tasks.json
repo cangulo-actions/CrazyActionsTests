@@ -1,0 +1,61 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "0-import-cypress-tests.sh",
+            "type": "shell",
+            "command": "scripts/${input:actionName}/0-import-cypress-tests.sh",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "focus": true,
+                "echo": true,
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "1-run-cypress.sh",
+            "type": "shell",
+            "command": "scripts/${input:actionName}/1-run-cypress.sh",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "focus": true,
+                "echo": true,
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "2-export-cypress-tests.sh",
+            "type": "shell",
+            "command": "scripts/${input:actionName}/2-export-cypress-tests.sh",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "focus": true,
+                "echo": true,
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "actionName",
+            "description": "What gh action you want to test?",
+            "options": [
+              "semver",
+              "conventional-commits-validator"
+            ],
+            "default": "conventional-commits-validator"
+          },
+    ]
+}

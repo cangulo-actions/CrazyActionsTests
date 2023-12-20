@@ -1,18 +1,18 @@
 import { BeforeAll } from '@badeball/cypress-cucumber-preprocessor'
 
 BeforeAll(function () {
-  const resetRepoEnabled = Cypress.env('BEFORE_ALL_RESET_REPO_ENABLED')
+  const prepareRepoEnabled = Cypress.env('BEFORE_ALL_PREPARE_REPO_ENABLED')
   const closePRsEnabled = Cypress.env('BEFORE_ALL_CLOSE_ANY_PR')
 
-  if (resetRepoEnabled) {
-    const waitTimeWorkflow = Cypress.env('GH_WORKFLOW_RESET_REPO_TIMEOUT')
-    const semverBranchName = Cypress.env('SEMVER_BRANCH')
-    const workflowId = 'reset-repo.yml'
+  if (prepareRepoEnabled) {
+    const waitTimeWorkflow = Cypress.env('GH_WORKFLOW_PREPARE_REPO_TIMEOUT')
+    const ccBranchName = Cypress.env('CC_BRANCH')
+    const workflowId = 'prepare-cc-tests.yml'
     const workflowParams = {
       ref: 'main',
       inputs: {
-        'semver-version': semverBranchName,
-        'enable-ci-workflow': false
+        'cc-version': ccBranchName,
+        'enable-ci-workflow': true
       }
     }
 
@@ -20,6 +20,8 @@ BeforeAll(function () {
     cy
       .triggerWorkflow({ workflowId, workflowParams })
       .wait(waitTimeWorkflow)
+  } else {
+    console.log('trigger reset repo workflow skipped')
   }
 
   if (closePRsEnabled) {

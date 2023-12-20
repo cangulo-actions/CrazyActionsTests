@@ -25,33 +25,34 @@ Cypress.Commands.add('createPR', ({ title, description, branch }) => {
 
       const pr = {
         id: response.body.id,
-        number: response.body.number
+        number: response.body.number,
+        headSha: response.body.head.sha
       }
       return pr
     })
 })
 
-Cypress.Commands.add('mergePR', (number) => {
+Cypress.Commands.add('closePR', (number) => {
   const ghAPIUrl = Cypress.env('GH_API_URL')
-  const pullsUrl = `${ghAPIUrl}/pulls/${number}/merge`
+  const pullsUrl = `${ghAPIUrl}/pulls/${number}`
   const expectedCode = 200
 
   return cy
     .request(
       {
-        method: 'PUT',
+        method: 'PATCH',
         url: pullsUrl,
         headers: {
           Authorization: `token ${Cypress.env('GH_TOKEN')}`
         },
         body: {
-          merge_method: 'squash'
+          state: 'closed'
         }
       }
     )
     .then((response) => {
       expect(response.status)
-        .to.equal(expectedCode, 'the response code received when merging the PR is not the expected one')
+        .to.equal(expectedCode, 'the response code received when closing the PR is not the expected one')
 
       const mergeCommit = response.body.sha
       return mergeCommit
