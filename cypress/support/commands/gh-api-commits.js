@@ -39,8 +39,7 @@ Cypress.Commands.add('getCommitCheckRuns', ({ commitId, checkName, status }) => 
         url: getCommitCheckRunsUrl,
         headers: {
           Authorization: `token ${Cypress.env('GH_TOKEN')}`
-        },
-        failOnStatusCode: true
+        }
       }
     )
     .then((response) => {
