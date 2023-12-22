@@ -14,7 +14,7 @@ jobs:
 
       - name: Validate Conventional Commits
         # this must target main or a valid branch in the cangulo-actions/conventional-commits-validator repo
-        uses: cangulo-actions/conventional-commits-validator@#15
+        uses: cangulo-actions/conventional-commits-validator@main
         id: validate-commits
         with:
           configuration: pr-commits.json
