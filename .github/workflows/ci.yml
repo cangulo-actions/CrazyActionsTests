@@ -18,5 +18,8 @@ jobs:
         id: validate-commits
         with:
           configuration: semver-commits.yml
+          add-next-release-type-as-label-to-pr: true
+          add-commit-types-as-labels-to-pr: true
+          add-commit-scopes-as-labels-to-pr: true
 
 # refresh 2023-11-27
