@@ -24,7 +24,7 @@ jobs:
         uses: cangulo-actions/semver@main
         id: semver
         with:
-          configuration: semver.yml
+          configuration: semver-commits.yml
           create-gh-release: true
           print-summary: true
           print-annotations: true

@@ -17,6 +17,6 @@ jobs:
         uses: cangulo-actions/conventional-commits-validator@#17
         id: validate-commits
         with:
-          configuration: pr-commits.json
+          configuration: semver-commits.yml
 
 # refresh 2023-11-27

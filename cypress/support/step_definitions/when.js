@@ -4,7 +4,7 @@ When('I create a PR with title {string}', (title) => {
   const ccPRNumber = Cypress.env('CC_PR_NUMBER')
   const branch = Cypress.env('BRANCH_TO_CREATE')
   const description = `PR created for testing the conventional-commits-validator GH action. Triggered by ci.yml in the PR cangulo-actions/semver#${ccPRNumber}`
-  debugger
+
   cy
     .createPR({ title, description, branch })
     .then((pr) => {

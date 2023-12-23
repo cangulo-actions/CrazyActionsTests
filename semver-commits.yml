@@ -18,7 +18,11 @@ commits:
 
 scopes:
   - key: tfm
+    files:
+      - "terraform/**"
     versioning:
       file: terraform/version.json
       changelog: terraform/CHANGELOG.md
   - key: src
+    files:
+      - "src/**"

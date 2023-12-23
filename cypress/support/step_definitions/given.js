@@ -10,24 +10,25 @@ Given('I checkout a branch', () => {
 })
 
 Given('I commit the next change {string}', (commitMsg) => {
-  debugger
   commitAndPushChanges([commitMsg])
 })
 
 Given('I commit the next changes', (table) => {
   const branch = Cypress.env('BRANCH_TO_CREATE')
-  debugger
   table
     .rows().forEach(row => {
-      debugger
       const commitMsg = row[0]
-      const file = row[1]
-      const currentTime = Cypress.moment().format('YYYYMMDD-HHmm-ss')
-      const content = `# refresh ${currentTime}`
-      cy
-        .writeFile(file, content)
-        .exec(`git add "${file}"`)
-        .exec(`git commit -m "${commitMsg}"`)
+      if (row.length === 1) {
+        cy.exec(`git commit --allow-empty -m "${commitMsg}"`)
+      } else {
+        const file = row[1]
+        const currentTime = new Date().toISOString()
+        const content = `# refresh ${currentTime}`
+        cy
+          .writeFile(file, content)
+          .exec(`git add "${file}"`)
+          .exec(`git commit -m "${commitMsg}"`)
+      }
     })
   push(branch)
 })
