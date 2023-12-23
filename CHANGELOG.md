@@ -1,3 +1,8 @@
+# 3.0.1 fix: commit that fixes something (#1049)
+
+## patches:
+* fix: commit that fixes something (#1049)
+
 # 3.0.0 multiple commits with scope (#1038)
 
 ## breaking changes:
