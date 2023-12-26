@@ -1,7 +1,7 @@
 Feature: CI workflow succeed after a PR is created
 
   Scenario: PR with one commit
-    Given I checkout a branch
+    Given I checkout a branch from main
     And I commit the next change "<commitMsg>"
     When I create a PR with title "<prTitle>"
     Then the CI workflow triggered must conclude in "success"
@@ -14,7 +14,7 @@ Feature: CI workflow succeed after a PR is created
       | break: commit that introduces a breaking change | 1 break commit |
 
   Scenario: PR with multiple commits without scopes
-    Given I checkout a branch
+    Given I checkout a branch from main
     And I commit the next changes
       | ci: commit that fixes something                |
       | fix: commit that fixes something               |
@@ -24,7 +24,7 @@ Feature: CI workflow succeed after a PR is created
     Then the CI workflow triggered must conclude in "success"
 
   Scenario: PR with multiple commits with scopes
-    Given I checkout a branch
+    Given I checkout a branch from main
     And I commit the next changes
       | ci(tfm): commit that fixes something in terraform    | terraform/main.tf      |
       | fix(src): commit that fixes something in the lambdas | src/lambda1/lambda1.py |

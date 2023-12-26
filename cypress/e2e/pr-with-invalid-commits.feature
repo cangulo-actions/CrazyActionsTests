@@ -1,7 +1,7 @@
 Feature: CI workflow fail because of invalid commits
 
   Scenario: PR with one invalid commit
-    Given I checkout a branch
+    Given I checkout a branch from main
     And I commit the next change "<commitMsg>"
     When I create a PR with title "<prTitle>"
     Then the CI workflow triggered must conclude in "failure"
@@ -12,7 +12,7 @@ Feature: CI workflow fail because of invalid commits
       | wrong commit message              | unconventional commit |
 
   Scenario: PR with multiple invalid commits with scopes
-    Given I checkout a branch
+    Given I checkout a branch from main
     And I commit the next changes
       | ci(tfm): commit with scope tfm but modify lambdas         | src/lambda1/lambda1.py |
       | fix(src): commit with scope src but modify terraform code | terraform/main.tf      |

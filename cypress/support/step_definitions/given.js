@@ -1,12 +1,25 @@
 const { Given } = require('@badeball/cypress-cucumber-preprocessor')
 
-Given('I checkout a branch', () => {
+Given('I checkout a branch from main', () => {
   const branch = Cypress.env('BRANCH_TO_CREATE')
   cy
     .exec('git checkout main')
     .exec('git pull')
     .exec(`git branch -D ${branch} || true`)
     .exec(`git checkout -b ${branch}`)
+})
+
+Given('I create the {string} file with the next content:', (filePath, fileContent) => {
+  const ccBranchName = Cypress.env('CC_BRANCH')
+  const content = fileContent.replace(/<TARGET_BRANCH>/g, ccBranchName)
+
+  cy
+    .exec(`rm -f "${filePath}" || true `)
+    .writeFile(filePath, content)
+})
+
+Given('I stage the file {string}', (filePath) => {
+  cy.exec(`git add "${filePath}"`)
 })
 
 Given('I commit the next change {string}', (commitMsg) => {
