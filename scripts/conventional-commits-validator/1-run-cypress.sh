@@ -19,8 +19,8 @@ export CYPRESS_GH_WORKFLOW_PREPARE_REPO_TIMEOUT="30000"
 export CYPRESS_WAIT_TIME_CI_WORKFLOW="25000"
 export CYPRESS_API_RETRY_INTERVAL_MS="10000"
 export CYPRESS_API_RETRY_TIMEOUT_MS="40000"
-# export CYPRESS_TAGS="@smoke"
-export CYPRESS_TAGS="not @smoke" # run all tests
+export CYPRESS_TAGS="@smoke"
+# export CYPRESS_TAGS="not @smoke" # run all tests
 
 smoke_spec="./cypress/e2e/smoke-test.feature"
 pr_created_spec="./cypress/e2e/pr-created.feature"
@@ -32,5 +32,5 @@ cypress open --e2e \
     --project ./ \
     --browser electron 
 
-git checkout main
-git pull origin main
+# git checkout main
+# git pull origin main

@@ -1,3 +1,5 @@
+import path from 'path'
+import { promises as fs } from 'fs'
 const { Given } = require('@badeball/cypress-cucumber-preprocessor')
 
 Given('I checkout a branch', () => {
@@ -7,6 +9,15 @@ Given('I checkout a branch', () => {
     .exec('git pull')
     .exec(`git branch -D ${branch} || true`)
     .exec(`git checkout -b ${branch}`)
+})
+
+Given('I create the {string} file with the next content:', async (filePath, fileContent) => {
+  await fs.mkdir(path.dirname(filePath), { recursive: true })
+  await fs.writeFile(filePath, fileContent)
+})
+
+Given('I stage the file {string}', (filePath) => {
+  cy.exec(`git add "${filePath}"`)
 })
 
 Given('I commit the next change {string}', (commitMsg) => {
