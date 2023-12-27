@@ -7,12 +7,10 @@ repo="CrazyActionsTests"
 
 export CYPRESS_GH_TOKEN=$(gh auth token)
 export CYPRESS_GH_API_URL="https://api.github.com/repos/${owner}/${repo}"
-export CYPRESS_CC_BRANCH="#8"
+export CYPRESS_CC_BRANCH="improve-tests"
 export CYPRESS_CC_PR_NUMBER="LOCAL-TEST"
 export CYPRESS_BRANCH_TO_CREATE="LOCAL-TEST"
 
-export CYPRESS_BEFORE_ALL_PREPARE_REPO_ENABLED="false"
-export CYPRESS_BEFORE_ALL_CLOSE_ANY_PR="false"
 export CYPRESS_AFTER_ALL_PREPARE_REPO_ENABLED="false"
 export CYPRESS_GH_WORKFLOW_PREPARE_REPO_TIMEOUT="30000"
 
@@ -32,5 +30,5 @@ cypress open --e2e \
     --project ./ \
     --browser electron 
 
-# git checkout main
-# git pull origin main
+git checkout main
+git pull origin main

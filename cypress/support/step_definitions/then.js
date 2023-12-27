@@ -4,7 +4,7 @@ Then('the CI workflow triggered must conclude in {string}', (result) => {
   const waitTimeCI = Cypress.env('WAIT_TIME_CI_WORKFLOW')
   const retryInterval = Cypress.env('API_RETRY_INTERVAL_MS')
   const maxTimeout = Cypress.env('API_RETRY_TIMEOUT_MS')
-  const checkName = 'test cangulo-actions/conventional-commits-validator' // must match the job name in the ci.yml workflow
+  const checkName = 'Validate Commits' // must match the job name in the ci.yml workflow
   const status = 'completed'
 
   cy
