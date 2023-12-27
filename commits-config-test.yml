@@ -1,0 +1,7 @@
+scopes:
+  - key: tfm
+    files:
+      - "terraform/**"
+  - key: src
+    files:
+      - "src/**"
