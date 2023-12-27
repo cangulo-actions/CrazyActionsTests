@@ -2,7 +2,6 @@ name: 🛎️ reset repo
 run-name: >
   🛎️ reset repo |
    ${{ inputs.semver-version != '' && format('semver-version: {0}', inputs.semver-version) || '' }} 
-   ${{ inputs.enable-ci-workflow && 'enable ci workflow' || 'disable ci workflow' }}
 on:
   workflow_dispatch:
     inputs:
@@ -11,11 +10,6 @@ on:
         type: string
         required: false
         default: ''
-      enable-ci-workflow:
-        description: 'enable ci.yml workflow'
-        type: boolean
-        required: false
-        default: false
 
 concurrency: 
   group: reset-repo
@@ -93,10 +87,6 @@ jobs:
           SEMVER_VERSION: ${{ inputs.semver-version }}
         run: |
           sed -i "s/cangulo-actions\/semver@.*/cangulo-actions\/semver@${SEMVER_VERSION}/g" .github/workflows/cd.yml
-
-      - name: enable/disable ci.yml workflow
-        run: |
-          gh workflow ${{ inputs.enable-ci-workflow && 'enable' || 'disable' }} ci.yml || true
 
       - name: commit changes
         run: |
