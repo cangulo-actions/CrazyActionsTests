@@ -1,0 +1,11 @@
+commits:
+  - type: ci
+    release: none
+
+scopes:
+  - key: tfm
+    files:
+      - "terraform/**"
+  - key: src
+    files:
+      - "src/**"
