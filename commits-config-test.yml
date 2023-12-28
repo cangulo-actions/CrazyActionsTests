@@ -1,0 +1,6 @@
+commits:
+  - type: ci  # miss the release type
+
+scopes:
+  - tfm       # miss scope properties {key,files}
+  - src
