@@ -1,0 +1,18 @@
+name: Test conventional-commits-validator
+on:
+  pull_request: 
+    branches:
+      - main
+
+jobs:
+  validate-commits:
+    name: Validate Commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Conventional Commits
+        uses: cangulo-actions/conventional-commits-validator@improve-tests
+        with:
+          label-pr-with-commit-scopes: true
